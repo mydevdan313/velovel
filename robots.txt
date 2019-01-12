@@ -30,6 +30,9 @@ Disallow: /*?*lp*
 Disallow: *applyFilter=*
 Disallow: *?inCartProductId=*
 Disallow: *?inCompareProductId=*
-
+<metaname=«keywords» content=«Âåëîñïîðò»/>
+<metaname=«keywords» content=«Âåëîñèïåä»/>
+<metaname=«keywords» content=«Êóïèòü âåëîñèïåä»/>
+<metaname=«keywords» content=«Âåëîñèïåäû Êåìåðîâî»/>
 
 Sitemap: http://sp.ru/sitemap.xml
