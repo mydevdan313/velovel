@@ -1,0 +1,129 @@
+// snippets
+// ------------------------------------------------------------
+.center-absolute()         { top: 0; left: 0; right: 0; bottom: 0; margin: auto; position: absolute; }
+
+.click()                   { transform: translateY(3px); }
+
+.clearfix()                { &:before, &:after { content: ' '; display: table; clear: both; } }
+
+.text-overflow()           { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+// transform-top
+.transform-top()           { opacity: 0; visibility: hidden; transform: scaleY(0); transform-origin: top left; transition: all .3s; }
+.transform-top--open()     { opacity: 1; visibility: visible; transform: scaleY(1); }
+
+// transform-left
+.transform-left()          { opacity: 0; visibility: hidden; transform: scaleX(0); transform-origin: top left; transition: all .3s; }
+.transform-left--open()    { opacity: 1; visibility: visible; transform: scaleX(1); }
+
+// scale
+.scale()                   { opacity: 0; visibility: hidden; transform: scale(0.7); transition: all .3s; }
+.scale--open()             { opacity: 1; visibility: visible; transform: scale(1); }
+
+// translateX-left
+.translateX-left()         { opacity: 0; visibility: hidden; transform: translateX(-20%); transition: all .3s; }
+.translateX-left--open()   { opacity: 1; visibility: visible; transform: translateX(0); }
+
+// translateX-right
+.translateX-right()        { opacity: 0; visibility: hidden; transform: translateX(20%); transition: all .3s; }
+.translateX-right--open()  { opacity: 1; visibility: visible; transform: translateX(0); }
+
+// translateY-bottom
+.translateY-bottom()       { opacity: 0; visibility: hidden; transform: translateY(100%); transition: all .3s; }
+.translateY-bottom--open() { opacity: 1; visibility: visible; transform: translateY(0); }
+
+// translateY-top
+.translateY-top()          { opacity: 0; visibility: hidden; transform: translateY(-100%); transition: all .3s; }
+.translateY-top--open()    { opacity: 1; visibility: visible; transform: translateY(0); }
+
+// rotate
+.rotate()                  { opacity: 0; visibility: hidden; transform: scale(0) rotate(720deg); transition: all .5s; }
+.rotate--open()            { opacity: 1; visibility: visible; transform: scale(1) rotate(0deg); }
+
+// fadeInTop
+.fadeInTop()               { opacity: 0; visibility: hidden; margin-top: 35px; transition: all .3s; }
+.fadeInTop--open()         { opacity: 1; visibility: visible; margin-top: 0; }
+
+// fadeInBottom
+.fadeInBottom()            { opacity: 0; visibility: hidden; margin-bottom: 35px; transition: all .3s; }
+.fadeInBottom--open()      { opacity: 1; visibility: visible; margin-bottom: 0; }
+
+
+// grid
+// ------------------------------------------------------------
+.grid(@column; @margin: 0;) {
+    @width: (100% / @column);
+    @minus: (@column - 1);
+    @calc: @margin * @minus / @column;
+    margin-top: @margin;
+    width: calc(~ '@{width} - @{calc}');
+
+    @counter: @column;
+    .loop(@counter) when (@counter > 0) {
+        .loop((@counter - 1));
+
+        &:nth-of-type(@{column}n + @{counter}) {
+          margin-right: @margin;
+        }
+    }
+    .loop(@counter - 1);
+
+    &:nth-of-type(-n + @{column}) {
+        margin-top: 0;
+    }
+}
+
+
+// scrollbar
+// ------------------------------------------------------------
+.scrollbar() {
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: @color-1;
+    }
+}
+
+
+// responsive
+// ------------------------------------------------------------
+@min-1600: ~'(min-width: 1600px)';
+@max-1599: ~'(max-width: 1599px)';
+
+@min-1440: ~'(min-width: 1440px)';
+@max-1439: ~'(max-width: 1439px)';
+
+@min-1366: ~'(min-width: 1366px)';
+@max-1365: ~'(max-width: 1365px)';
+
+@min-1280: ~'(min-width: 1280px)';
+@max-1279: ~'(max-width: 1279px)';
+
+@min-1025: ~'(min-width: 1025px)';
+@max-1024: ~'(max-width: 1024px)';
+
+@min-990:  ~'(min-width: 990px)' ;
+@max-989:  ~'(max-width: 989px)' ;
+
+@min-768:  ~'(min-width: 768px)' ;
+@max-767:  ~'(max-width: 767px)' ;
+
+@min-375:  ~'(min-width: 375px)' ;
+@max-374:  ~'(max-width: 374px)' ;
+
+@min-0:    ~'(min-width: 0px)'   ;

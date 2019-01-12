@@ -1,0 +1,83 @@
+@import url(../_mixin.less);
+@import url(../_variables.less);
+@theme: #81bd60;
+@theme-bg: linear-gradient(to right, #76b852, #8dc26f);
+
+/* theme color
+------------------------------------------------------------------- */
+.addToCart,
+.filter-btn,
+.default-btn,
+.product-info,
+.refreshFiltere,
+.comments .sendComment,
+.payment-form-block [type="submit"],
+.c-buy__buttons > a:not(&.addToCompare),
+.wrapper-modal-back-ring .red-btn,
+.wrapper-modal-back-ring .red-btn:hover,
+.c-button:not(&.c-search__button):not(&[href="#c-nav__catalog"]):not(&.c-button--link):not(&.c-button--border) {
+    background: @theme-bg;
+}
+.c-catalog .c-button {
+    color: @theme;
+}
+a.addToCompare:hover,
+.c-button--border:hover {
+    border-color: @theme;
+}
+.c-carousel .owl-dot {
+    &.active {
+        background: @theme;
+        border-color: @theme;
+    }
+    &:hover {
+        border-color: @theme;
+    }
+}
+.c-cart__small--icon {
+    color: @theme;
+}
+@media @min-1025 {
+    .c-catalog__icon {
+        color: @theme;
+    }
+}
+.c-compare__link--icon {
+    color: @theme;
+}
+.c-contact__column .icon {
+    color: @theme;
+}
+.c-filter label [type="checkbox"]:checked ~ .unit {
+    background: @theme;
+}
+.c-form label.active:before {
+    background: @theme;
+}
+.c-login__icon {
+    color: @theme;
+}
+@media @max-1024 {
+    .c-nav__icon {
+        color: @theme;
+    }
+}
+.c-pagination ul a {
+    &:hover,
+    &.active {
+        color: @color-1;
+        background: @theme;
+    }
+}
+.c-search__button {
+    color: @theme;
+}
+.c-switcher__item--active {
+    color: @theme;
+}
+.l-footer:before {
+    background: @theme-bg;
+}
+.l-header__bottom {
+    background: @theme-bg;
+}

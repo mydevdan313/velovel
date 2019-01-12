@@ -1,0 +1,19 @@
+AddType image/x-icon .ico
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+Options -Indexes
+RewriteEngine on
+
+#RewriteBase /
+#запрос к изображению напрямую без запуска движка 
+RewriteCond %{REQUEST_URI} \.(png|gif|ico|swf|jpe?g|js|css|ttf|svg|eot|woff|yml|xml|zip|txt|doc)$
+RewriteRule ^(.*) $1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_URI} \.(ini|ph.*)$
+RewriteRule ^(.*) index.php [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L,QSA]
+</IfModule>
+<IfModule mod_php5.c> 
+php_flag magic_quotes_gpc Off
+</IfModule>

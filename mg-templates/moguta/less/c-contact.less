@@ -1,0 +1,114 @@
+/* c-contact
+------------------------------------------------------------------- */
+.c-contact {
+    .var () { @root: ~'.c-contact'; }.var;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+
+    @media @max-1024 {
+        font-size: 14px;
+    }
+
+    @media @max-767 {
+        font-size: 13px;
+    }
+
+    &:before {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        content: '';
+        position: absolute;
+        background: @color-4;
+    }
+
+    &__column {
+        position: relative;
+        padding-left: 44px;
+        padding-right: 30px;
+
+        @media @max-1024 {
+            padding-left: 40px;
+            padding-right: 16px;
+        }
+
+        @media @max-989 {
+            padding-left: 0;
+        }
+
+        @media @max-767 {
+            &:first-of-type {
+                display: none;
+            }
+        }
+
+        @media @min-375 and @max-767 {
+            &:last-of-type {
+                padding-left: 40px;
+            }
+        }
+
+        .icon {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            color: @theme;
+            font-size: 34px;
+            position: absolute;
+
+            @media @max-1024 {
+                font-size: 28px;
+            }
+
+            @media @max-989 {
+                display: none;
+            }
+
+            @media @min-375 and @max-767 {
+                &--phone {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__row {
+        line-height: 1;
+        margin-top: 6px;
+
+        @media @max-767 {
+            margin-top: 8px;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    &__span {
+        color: @color-6;
+        font-size: 14px;
+        font-weight: 400;
+
+        @media @max-767 {
+            font-size: 13px;
+        }
+    }
+
+    // &:after {
+    //     width: 1px;
+    //     height: 100%;
+    //     content: '';
+    //     background: @color-6;
+    // }
+}
+
+// influence
+// -------------------------------------------------------------------

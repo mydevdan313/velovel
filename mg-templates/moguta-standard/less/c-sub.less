@@ -1,0 +1,60 @@
+/* c-sub
+------------------------------------------------------------------- */
+.c-sub {
+    .var () { @root: ~'.c-sub'; }.var;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid @color-4;
+    transition: box-shadow .3s, border-color .3s;
+
+    @media @max-767 {
+        padding: 6px;
+    }
+
+    &__img {
+        height: 100px;
+        position: relative;
+
+        @media @max-1024 {
+            height: 60px;
+        }
+
+        @media @max-767 {
+            height: 40px;
+        }
+
+        img {
+            .center-absolute();
+        }
+    }
+
+    &__title {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.2;
+        margin-top: 16px;
+        font-weight: 600;
+        text-align: center;
+
+        @media @max-1024 {
+            font-size: 13px;
+        }
+
+        @media @max-767 {
+            font-size: 10px;
+            margin-top: 6px;
+        }
+    }
+
+    &:hover {
+        border-color: transparent;
+        box-shadow: 0 0 30px rgba(0,0,0,.2);
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

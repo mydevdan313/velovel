@@ -1,0 +1,21 @@
+<?php
+$lang = array(  
+  "SAVE_MODAL" => 'Save',
+  "ENTITY_SAVE" => 'Save successful',
+  "ENTITY_SAVE_NOT" => 'Failed to save',
+  "ENTITY_DEL" => 'Deleted successfully',
+  "ENTITY_DEL_NOT" => 'Failed to remove',
+  "SAVE" => "Save",
+  "ENTITY_NONE" => "No records",
+  "SHOW_COUNT_BRAND" => "The number of brands on the page",
+  "ACTIONS" => "Actions",
+  "EDIT" => "Edit",
+  "DELETE" => "Delete",
+  "EXPORT_DONE" => "Export successfully completed",
+  "EXPORT_NOT_DONE" => "Could not complete the export",
+  "HEADER_MODAL_ADD" => "Edit",
+  "CLOSE_MODAL" => "Close",
+  "CONFIRM_DEL" => "When you remove the brand will delete the corresponding item in the feature 'the Brand'. Do you want to remove the entry??",
+  "T_TIP_ADD_BRAND" => "To add a new brand in the characteristic",
+  "ADD_BRAND" => "Add brand",
+);

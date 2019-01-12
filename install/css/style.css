@@ -1,0 +1,521 @@
+/*Верстка инсталлятора системы*/
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url(../images/roof.png);
+    min-width: 1000px;
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clear {
+    clear: both;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+
+textarea:focus,
+input[type="password"]:focus,
+input[type="text"]:focus{
+    border: 1px solid #C1BEBE;
+}
+
+input[type="checkbox"]{
+    margin: 0;
+    vertical-align: middle;
+}
+
+label{
+    cursor: pointer;
+}
+
+.install-body {
+    width: 980px;
+    margin: 20px auto;
+    height: 100%;
+    font-size: 14px;
+}
+
+.install-body.finish .install-text{
+    padding: 40px 20px 50px;
+}
+
+.install-body.finish{
+    width: 560px;
+}
+
+.install-body a:hover{
+    text-decoration: none;
+}
+
+.install-body a{
+    color: #3679CE;
+}
+
+.install-logo{
+    margin: 0 0 20px 0;
+    text-align: center;
+    width: 275px;
+    height: 55px;
+}
+
+.center-wrapper {
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.15);
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.center-wrapper h1 {
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #444;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+}
+
+.license-block {
+    border: 1px solid #e0dede;
+    border-radius: 3px;
+    padding: 10px;
+    height: 350px;
+    overflow: auto;
+    color: #3E3E3E;
+    line-height: 21px;
+    font-size: 12px;
+}
+
+.license-block p {
+    margin: 0;
+}
+
+.license-block h2 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.license-block h3 {
+    font-size: 14px;
+}
+
+.agree-blok {
+    text-align: right;
+    color: #3E3E3E;
+}
+
+.agree-blok-noborder {
+    text-align: right;
+    padding: 0 10px 10px 10px;
+}
+
+.radiobotton-text{
+    margin: 0 0 10px 0;
+}
+
+.install-footer .agree-blok label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.install-text.success-install h2{
+    font-size: 22px;
+    text-align: center;
+    margin: 0 0 25px 0;
+    font-weight: normal;
+}
+
+.install-text.success-install h2 img{
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+}
+
+.install-text .buttons-holder{
+    text-align: center;
+}
+
+.install-text .buttons-holder a{
+    margin: 0 10px;
+}
+
+.install-text {
+    padding: 20px;
+    color: #3E3E3E;
+}
+
+.center-wrapper .install-footer{
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.install-text p {
+    line-height: 22px;
+    margin: 0;
+}
+
+.if-text {
+    font-size: 12px;
+}
+
+.start-install {
+    float: right;
+}
+
+.agree-button {
+    margin: 0 0 0 15px;
+}
+
+.save-settings {
+    float: right;
+}
+
+.install-body .agree-button,
+.install-body .start-install,
+.install-body .save-settings,
+.install-body .dell-install {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    background: #fdfdfd;
+    background: -moz-linear-gradient(top,  #fdfdfd 0%, #efefef 100%);
+    background: -webkit-linear-gradient(top,  #fdfdfd 0%,#efefef 100%);
+    background: linear-gradient(to bottom,  #fdfdfd 0%,#efefef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#efefef',GradientType=0 );
+    font-size: 14px;
+    height: 34px;
+    line-height: 32px;
+    padding: 0 15px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.20);
+    border: 1px solid #CCC;
+    font-weight: bold;
+    color: #666;
+    text-decoration: none;
+}
+
+.install-body .dell-install.green-btn{
+    background: #5cb85c;
+    color: #fff;
+    border: none;
+}
+
+.install-body .dell-install.green-btn:hover{
+    background: #449d44;
+}
+
+.install-body .dell-install.blue-btn{
+    background: #286090;
+    color: #fff;
+    border: none;
+}
+
+.install-body .dell-install.blue-btn:hover{
+    background: #337ab7;
+}
+
+button span{
+    padding: 0;
+}
+
+.install-body .agree-button:hover,
+.install-body .start-install:hover,
+.install-body .save-settings:hover,
+.install-body .dell-install:hover {
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#eeeeee', GradientType=0); /* IE6-9 */
+    background: linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
+    outline: none; /* W3C */
+}
+
+.install-body .agree-button:active,
+.install-body .start-install:active,
+.install-body .save-settings:active,
+.install-body .dell-install:active {
+    box-shadow: inset 0 0 13px 2px rgba(0,0,0,0.05);
+    position: relative;
+    top: 1px;
+    outline: none;
+}
+
+.widget-table-title {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+.widget-table-title .step-list{
+    float: right;
+    margin: -15px -20px -15px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.widget-table-title .step-list li.passed{
+    background: #6F6E6E;
+    opacity: 0.3;
+}
+
+.widget-table-title .step-list li.active{
+    color: #fff;
+    background: #57AF57;
+}
+
+.widget-table-title .step-list li{
+    float: left;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    border-left: 1px solid #ddd;
+}
+
+.widget-table-title h3{
+    margin: 0;
+    float: left;
+}
+
+.widget-table-title h4 {
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #444;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 0;
+}
+
+.widget-table-title.text-center h3{
+    float: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.product-text-inputs {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: inline-block;
+}
+
+.product-text-inputs li {
+    margin: 0 0 10px 0;
+}
+
+.install-text .custom-text {
+    display: inline-block;
+    min-width: 0;
+}
+
+.product-name-input {
+    box-sizing: border-box;
+    height: 32px;
+    width: 260px;
+    border: 1px solid #CCCCCC;
+    padding: 5px 10px;
+    box-shadow: inset 0 1px 2px #E7E7E7;
+}
+
+.add-img-form h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+}
+
+.add-img-form {
+    position: relative;
+}
+
+.title {
+    margin: 15px 0;
+}
+
+.bd-title {
+    float: left;
+}
+
+.red-star {
+    color: red
+}
+
+.attention {
+    border-radius: 10px;
+    color: #68676B;
+}
+
+.attention strong {
+    color: #DF0000;
+    font-size: 16px;
+}
+
+.error-pass,
+.error-email,
+.error-pass-count,
+.msgError{
+    margin: 20px 20px 0 20px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    color: #c2646d;
+    background: #fdd6da;
+    border: 1px solid #eca8a8;
+}
+
+.product-text-inputs li .checkit {
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 1px;
+}
+
+.install-text h2 {
+    font-size: 14px;
+}
+
+.opacity {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#add-img-form {
+    position: relative;
+}
+
+/*progress-bar*/
+.progress-button {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 14px 60px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 2px;
+
+    background-color: #DBDBDB;
+}
+
+.progress-button.in-progress,
+.progress-button.finished {
+    color: transparent !important;
+}
+
+.progress-button.in-progress:after,
+.progress-button.finished:after {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    padding-top: inherit;
+    color: #fff !important;
+    left: 0;
+}
+
+.progress-button.in-progress:after {
+    content: attr(data-loading);
+}
+
+.progress-button.finished:after {
+    content: attr(data-finished);
+    background-color: #2AD400;
+}
+
+.progress-button .tz-bar {
+    background-color: #FF1919;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+
+    border-radius: 0 0 2px 2px;
+
+    -webkit-transition: width 0.5s, height 0.5s;
+    -moz-transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s;
+}
+
+.progress-button .tz-bar.background-horizontal {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.install-text .add-img-form .bd-title {
+    float: none;
+}
+
+.install-text .form-table tr td{
+    padding: 0 20px 10px 0;
+}
+
+.install-text .form-table tr td i{
+    font-size: 12px;
+    display: block;
+    margin: 3px 0 0 0;
+}
+
+.install-text .help-text{
+    font-size: 12px;
+    margin: 0 0 15px 0;
+    color: #222;
+    background: #f5f5f5;
+    padding: 8px 10px;
+    border: 1px solid #e6e6e6;
+}
+
+.info-install-hosting{
+    margin: 0 0 15px 0;
+}
+
+.info-install-hosting ul li,
+.info-install-hosting h3{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+}
+
+.info-install-hosting ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+}

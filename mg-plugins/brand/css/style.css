@@ -1,0 +1,259 @@
+.section-brand .second-step-settings,
+.section-brand .first-settings {
+    margin: 10px 0;
+}
+.section-brand .link-result {
+    display: inline-block;
+    color: #92862e;
+    border: 1px solid #e1d260;
+    background: #fff6ae;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+.section-brand .mg-brand-table tbody td.logo img {
+    min-height: 50px;
+    height: auto;
+}
+.section-brand .second-step-settings select {
+    margin: 0 10px;
+}
+.section-brand input,
+.section-brand select {
+    width: 200px;
+}
+.section-brand .brand-buttons {
+    text-align: center;
+}
+.section-brand .brand-buttons.copy {
+    display: inline-block;
+}
+.section-brand .mg-brand-tbody tr {
+    cursor: move;
+}
+.section-brand .link-result {
+    display: block;
+    margin: 10px 0;
+}
+.section-brand .wrapper-entity-setting .link-result {
+    text-align: center;
+}
+.section-brand .mg-brand-attantion {
+    padding: 20px;
+    margin: 10px;
+    border: 3px #ffeded ridge;
+}
+.section-brand .logo-brand {
+    display: block;
+    margin: 5px 0;
+}
+.section-brand .filter .last-items-dropdown .countPrintRowsEntity {
+    width: 50px;
+}
+.section-brand .custom-table-wrapper .widget-table-body .mg-brand-info li #cke_desc {
+    margin: 10px 0 0 0;
+}
+.section-brand .custom-table-wrapper .widget-table-body .save-button {
+    margin: 15px 0 0 0;
+}
+.section-brand .custom-table-wrapper .widget-table-body .mg-brand-info li {
+    margin: 0 0 10px 0;
+}
+.section-brand li {
+    list-style-type: none; /* Убираем маркеры */
+}
+.section-brand ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+.section-brand .custom-table-wrapper .widget-table-body .mg-brand-info li > span {
+    display: inline-block;
+    width: 130px;
+}
+.section-brand .custom-table-wrapper .widget-table-body h3 {
+    margin: 0 0 15px 0;
+}
+.section-brand .mg-brand-table tr td,
+.section-brand .mg-brand-table tr th {
+    border: 1px solid #d3d3d3;
+    min-height: 200px;
+    text-align: center;
+}
+.section-brand .no-old-characteristic {
+    margin: 0 10px 0 0;
+}
+.section-brand .next-export span {
+    padding-right: 29px;
+    background: url('../images/go-icon.png') 90% center no-repeat;
+}
+.section-brand .no-old-characteristic span {
+    padding-left: 29px;
+    background: url('../images/close-icon.png') 7px center no-repeat;
+}
+.section-brand .export-old-characteristic span {
+    padding-left: 29px;
+    background: url('../images/check-icon.png') 7px center no-repeat;
+}
+/**
+* публичная часть
+**/
+.mg-brand-block .mg-brand-logo {
+    margin: 1.5%;
+}
+.mg-brand-block .mg-brand-logo > a {
+    display: -moz-flex;
+    display:  -ms-flex;
+    display:   -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display:      flex;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 50px;
+}
+.mg-brand-block {
+    font-size: 0;
+    text-align: center;
+}
+.mg-brand-block h1 {
+    font-size: 18px;
+    line-height: 16px;
+    margin: 0 0 10px 0;
+}
+.mg-brand-block .mg-brand-logo img {
+    width: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+.products-wrapper.brands .addToCompare {
+    margin-left: 30px;
+    float: right;
+}
+@media (min-width: 0) {
+    .min-0--6 {
+        display: block;
+        max-width: 50%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    }
+}
+@media (min-width: 768px) {
+    .min-768--4 {
+        display: block;
+        max-width: 33.333333%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+            flex: 0 0 33.333333%;
+    }
+}
+@media (min-width: 990px) {
+    .min-990--3 {
+        display: block;
+        max-width: 25%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    }
+}
+@media (min-width: 1025px) {
+    .min-1025--4 {
+        display: block;
+        max-width: 33.333333%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+            flex: 0 0 33.333333%;
+    }
+}
+@media (min-width: 768px) {
+    .l-col {
+        padding-top: 16px;
+        padding-left: 16px;
+    }
+}
+.brand-product-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+     -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 20px;
+}
+@media (min-width: 768px) {
+    .l-row {
+        margin-top: -16px;
+        margin-left: -16px;
+    }
+}
+.l-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -10px;
+    margin-left: -10px;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+}
+.brand-product-wrapper .product-wrapper {
+    display: -moz-flex;
+    display:  -ms-flex;
+    display:   -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display:      flex;
+    -moz-flex-direction: column;
+     -ms-flex-direction: column;
+      -o-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+         flex-direction: column;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 25%;
+    min-width: 260px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(218, 218, 218);
+    -webkit-border-image: initial;
+         -o-border-image: initial;
+            border-image: initial;
+    background-color: #fff;
+    text-align: center;
+}
+.c-goods__item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+    height: 100%;
+    -webkit-transition: box-shadow .3s, border-color .3s;
+    -webkit-transition: border-color .3s, -webkit-box-shadow .3s;
+            transition: border-color .3s, -webkit-box-shadow .3s;
+         -o-transition: box-shadow .3s, border-color .3s;
+            transition: box-shadow .3s, border-color .3s;
+            transition: box-shadow .3s, border-color .3s, -webkit-box-shadow .3s;
+    border: 1px solid #dadada;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.brand-product-wrapper .property-form.actionBuy {
+    width: 90%;
+}
+.brands .cat-desc-img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

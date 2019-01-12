@@ -1,0 +1,43 @@
+/* c-description
+------------------------------------------------------------------- */
+.c-description {
+    .var () { @root: ~'.c-description'; }.var;
+    line-height: 1.6;
+
+    h1 {
+        width: 100%;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    img {
+        float: left;
+        max-width: 200px;
+        max-height: 150px;
+        margin: 0 16px 10px 0;
+    }
+
+    &__top {
+        margin-bottom: 16px;
+
+        @media @max-767 {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        color: @color-5;
+        font-size: 12px;
+        margin-top: 26px;
+        padding-top: 16px;
+        border-top: 1px solid @color-4;
+
+        @media @max-767 {
+            display: none;
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

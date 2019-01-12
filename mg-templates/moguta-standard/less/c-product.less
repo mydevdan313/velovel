@@ -1,0 +1,154 @@
+/* c-product
+------------------------------------------------------------------- */
+.c-product {
+    .var () { @root: ~'.c-product'; }.var;
+
+    &__row {
+        margin-top: 10px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+        padding-left: 16px;
+
+        @media @max-767 {
+            padding-left: 0;
+            padding-top: 26px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+
+        @media @max-767 {
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        &--left {
+            color: @color-6;
+            text-align: right;
+            text-transform: lowercase;
+
+            @media @max-767 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &--right {
+            order: -1;
+
+            @media @max-767 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: baseline;
+
+        &--current {
+
+            @{root}__price--value {
+                font-size: 28px;
+
+                @media @max-989 {
+                    font-size: 22px;
+                }
+            }
+
+            @{root}__price--value {
+                color: @color-7;
+            }
+        }
+
+        &--old {
+            margin-top: 10px;
+
+            @{root}__price--value {
+                font-size: 20px;
+                color: @color-6;
+
+                @media @max-989 {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &--title {
+            color: @color-6;
+            font-size: 16px;
+            margin-right: 6px;
+
+            @media @max-989 {
+                display: none;
+            }
+
+            @media @max-767 {
+                display: block;
+                font-size: 14px;
+            }
+        }
+
+        &--value {
+            line-height: 1;
+            font-weight: 600;
+        }
+    }
+
+    &__stock {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        @media @max-767 {
+            margin-top: 0;
+        }
+
+        .icon {
+            margin-right: 6px;
+        }
+
+        &--in {
+            color: @color-10;
+        }
+
+        &--out {
+            color: @color-7;
+        }
+
+        &--span {
+            margin: 0 4px;
+        }
+    }
+
+    &__message {
+        margin-bottom: 16px;
+    }
+
+    &__code {
+        display: inline-flex;
+        align-items: center;
+        height: 24px;
+        padding: 0 10px;
+        background: @color-9;
+
+        &--span {
+            margin-left: 4px;
+        }
+    }
+
+}
+
+// influence
+// -------------------------------------------------------------------

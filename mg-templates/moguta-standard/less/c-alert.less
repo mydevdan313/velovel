@@ -1,0 +1,34 @@
+/* c-alert
+------------------------------------------------------------------- */
+.c-alert {
+    .var () { @root: ~'.c-alert'; }.var;
+    display: block;
+    padding: 10px 16px;
+
+    @media @max-767 {
+        padding: 10px;
+    }
+
+    &--red {
+        color: @alert-color-red;
+        background: @alert-bg-red;
+    }
+
+    &--blue {
+        color: @alert-color-blue;
+        background: @alert-bg-blue;
+    }
+
+    &--green {
+        color: @alert-color-green;
+        background: @alert-bg-green;
+    }
+
+    &--orange {
+        color: @alert-color-orange;
+        background: @alert-bg-orange;
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

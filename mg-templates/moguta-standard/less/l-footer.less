@@ -1,0 +1,22 @@
+/* l-footer
+------------------------------------------------------------------- */
+.l-footer {
+    .var () { @root: ~'.l-footer'; }.var;
+    flex: none;
+    padding: 16px 0;
+    position: relative;
+    background: @color-1;
+
+    &:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        content: '';
+        position: absolute;
+        background: @theme-bg;
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

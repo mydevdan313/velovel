@@ -1,0 +1,181 @@
+/* c-button
+------------------------------------------------------------------- */
+.mixin-button() {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 40px;
+    color: @color-1;
+    font-size: 16px;
+    padding: 0 36px;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 30px;
+    background: @theme-bg;
+    transition: color .3s, background .3s, box-shadow .3s;
+
+    @media @max-767 {
+        width: 100%;
+        height: 30px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    @media @min-1025 {
+
+        &:active {
+            transform: translateY(3px);
+        }
+
+        &:hover {
+            box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.36);
+        }
+    }
+}
+
+.c-button {
+    .mixin-button();
+
+    @media @max-767 {
+
+        & + & {
+            margin-top: 10px;
+        }
+    }
+
+    &--link {
+        border: 0;
+        color: @color-2;
+        padding: 0 26px;
+        background: transparent;
+        text-decoration: underline;
+
+        @media @max-767 {
+            height: auto;
+            padding: 0 16px;
+        }
+
+        &:hover {
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+
+    &--border {
+        color: @color-2;
+        background: @color-1;
+        border: 2px solid @color-4;
+        transition: border-color .3s;
+
+        &:hover {
+            box-shadow: none;
+            border-color: @theme;
+        }
+    }
+}
+
+
+// influence
+// -------------------------------------------------------------------
+.addToCart,
+.filter-btn,
+.default-btn,
+.product-info,
+.refreshFiltere,
+.c-buy__buttons > a {
+    .mixin-button();
+}
+
+.c-form__row .c-button {
+    margin-top: 10px;
+}
+
+.c-catalog {
+
+    .c-button {
+        width: 100%;
+        color: @theme;
+        padding: 0 20px;
+        font-size: 22px;
+        font-weight: 600;
+        background: @bg-light;
+
+        @media @max-767 {
+            height: 34px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        .icon {
+            font-size: 18px;
+            margin-right: 0;
+            margin-left: 10px;
+            transition: transform .3s;
+
+            @media @max-767 {
+                margin-top: 2px;
+                font-size: 12px;
+                margin-left: 6px;
+            }
+        }
+
+        @media @min-1025 {
+
+            &.active {
+                box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.36);
+
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &:hover {
+
+            @media @min-1025 {
+                box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.36);
+            }
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+.c-menu .c-button {
+    display: flex;
+    height: 28px;
+
+    @media @max-767 {
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    @media @min-1025 {
+        display: none;
+    }
+}
+
+a.addToCompare {
+    color: @color-2;
+    background: @color-1;
+    border: 2px solid @color-4;
+    transition: border-color .3s;
+
+    @media @max-767 {
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: none;
+        border-color: @theme;
+    }
+}
+
+.payment-form-block [type="submit"] {
+    .mixin-button();
+    margin-bottom: 16px;
+    padding: 0 36px !important;
+}

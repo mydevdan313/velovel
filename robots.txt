@@ -1,0 +1,35 @@
+User-agent: Yandex
+Allow: /uploads/
+Disallow: /install*
+Disallow: /mg-admin*
+Disallow: /personal*
+Disallow: /enter*
+Disallow: /forgotpass*
+Disallow: /payment*
+Disallow: /registration*
+Disallow: /compare*
+Disallow: /cart*
+Disallow: /*?*lp*
+Disallow: *applyFilter=*
+Disallow: *?inCartProductId=*
+Disallow: *?inCompareProductId=*
+Host: sp.ru
+
+User-agent: *
+Allow: /uploads/
+Disallow: /install*
+Disallow: /mg-admin*
+Disallow: /personal*
+Disallow: /enter*
+Disallow: /forgotpass*
+Disallow: /payment*
+Disallow: /registration*
+Disallow: /compare*
+Disallow: /cart*
+Disallow: /*?*lp*
+Disallow: *applyFilter=*
+Disallow: *?inCartProductId=*
+Disallow: *?inCompareProductId=*
+
+
+Sitemap: http://sp.ru/sitemap.xml

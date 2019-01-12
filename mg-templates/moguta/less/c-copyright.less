@@ -1,0 +1,30 @@
+/* c-copyright
+------------------------------------------------------------------- */
+.c-copyright {
+    .var () { @root: ~'.c-copyright'; }.var;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 13px;
+
+    &__moguta {
+        justify-content: flex-end;
+
+        .powered {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-left: 10px;
+                display: inline-block;
+            }
+        }
+    }
+
+    @media @max-767 {
+        justify-content: center;
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

@@ -1,0 +1,85 @@
+/* c-offcanvas
+------------------------------------------------------------------- */
+.c-offcanvas {
+    .var () { @root: ~'.c-offcanvas'; }.var;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 999;
+    position: fixed;
+    visibility: hidden;
+    background: rgba(0,0,0,.5);
+    transition: all .15s ease-in-out;
+
+    &__content {
+        overflow: auto;
+        position: absolute;
+        background: #000000;
+        transition: all .3s ease-in-out;
+
+        &--left, &--right {
+            top: 0;
+            bottom: 0;
+            width: 80%;
+
+            @media (min-width: 768px) {
+                width: 260px;
+            }
+        }
+
+        &--left {
+            left: -100%;
+        }
+
+        &--right {
+            right: -100%;
+        }
+
+        &--top, &--bottom {
+            left: 0;
+            right: 0;
+            height: 80%;
+
+            @media (min-width: 768px) {
+                height: 260px;
+            }
+        }
+
+        &--top {
+            top: -100%;
+        }
+
+        &--bottom {
+            bottom: -100%;
+        }
+    }
+
+    &--open {
+        opacity: 1;
+        visibility: visible;
+
+        @{root}__content {
+
+            &--top {
+                top: 0;
+            }
+
+            &--left {
+                left: 0;
+            }
+
+            &--right {
+                right: 0;
+            }
+
+            &--bottom {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

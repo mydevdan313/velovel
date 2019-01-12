@@ -1,0 +1,114 @@
+/* c-table
+------------------------------------------------------------------- */
+.c-table {
+
+    caption, th, td {
+        padding: 10px;
+        border: 1px solid @color-4;
+    }
+
+    th {
+        text-transform: uppercase;
+    }
+
+    @media @max-767 {
+        tr {
+            display: block;
+            margin-top: 16px;
+            border: 1px solid @color-4;
+            border-bottom: 2px solid @color-4;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        th {
+            display: none;
+        }
+
+        td {
+            width: 100%;
+            display: block;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: -1px;
+        }
+    }
+
+    &--overflow {
+        overflow: auto;
+    }
+
+    &--hover {
+        td {
+            transition: background-color .1s linear;
+        }
+
+        tr:hover td {
+            background-color: @table-hover;
+        }
+    }
+
+    &--striped tr:nth-of-type(even) {
+        background: @table-striped;
+    }
+
+    &__img,
+    &__count,
+    &__price,
+    &__remove {
+        text-align: center;
+    }
+
+    &__remove a:hover {
+        color: @color-7;
+    }
+
+    &__link {
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__quantity {
+        color: @color-6;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    &__price {
+        font-weight: 600;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: 16px;
+
+        @media @max-767 {
+            align-items: center;
+        }
+    }
+
+    &__total {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: right;
+        margin-bottom: 12px;
+    }
+
+    &--scroll {
+        max-height: 300px;
+        overflow: auto;
+    }
+}
+
+// influence
+// -------------------------------------------------------------------
+.c-modal .c-table {
+    margin-top: 16px;
+}

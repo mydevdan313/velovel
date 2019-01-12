@@ -1,0 +1,63 @@
+/* l-main
+------------------------------------------------------------------- */
+.l-main {
+    .var () { @root: ~'.l-main'; }.var;
+    flex: 1 0 auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    @media @max-767 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .l-container {
+        padding-top: 16px;
+        padding-bottom: 30px;
+        background: @color-1;
+    }
+
+    &__left {
+        padding-right: 10px;
+
+        @media @max-1024 {
+            left: -100%;
+            position: absolute;
+        }
+    }
+
+    @media @min-1025 {
+
+        &.active:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            z-index: 99;
+            position: fixed;
+            background: rgba(0,0,0,.5);
+            animation-name: fadeIn;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------
+.l-body__cart,
+.l-body__order,
+.l-body__index,
+.l-body__product,
+.l-body__personal {
+
+    .l-main__left {
+        display: none;
+    }
+
+    .l-main__right {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,49 @@
+/* c-switcher
+------------------------------------------------------------------- */
+.c-switcher {
+    .var () { @root: ~'.c-switcher'; }.var;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    @media @max-767 {
+        display: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 36px;
+        color: @color-5;
+        cursor: pointer;
+        font-size: 16px;
+        background: @color-1;
+        border: 1px solid @color-4;
+
+        &:first-child {
+            // border-top-left-radius: 3px;
+            // border-bottom-left-radius: 3px;
+        }
+
+        &:last-child {
+            border-left: 0;
+            // border-top-right-radius: 3px;
+            // border-bottom-right-radius: 3px;
+        }
+
+        &--active {
+            color: @theme;
+            pointer-events: none;
+        }
+
+        &:hover:not(&--active) {
+            background: @color-3;
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

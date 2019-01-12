@@ -1,0 +1,51 @@
+/* c-login
+------------------------------------------------------------------- */
+.c-login {
+    .var () { @root: ~'.c-login'; }.var;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: @theme;
+        font-size: 28px;
+
+        @media @max-1024 {
+            font-size: 24px;
+        }
+
+        @media @max-767 {
+            font-size: 22px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        margin-top: 4px;
+        color: @color-6;
+
+        @media @max-767 {
+            font-size: 11px;
+        }
+    }
+
+    &:hover @{root}__text {
+        text-decoration: underline;
+    }
+
+    &__registration {
+        margin-left: 20px;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

@@ -1,0 +1,40 @@
+/* property-form
+------------------------------------------------------------------- */
+.property-form {
+    .var () { @root: ~'.property-form'; }.var;
+
+    @media @max-767 {
+        font-size: 12px;
+    }
+
+    br {
+        display: none;
+    }
+
+    p {
+        line-height: 1.2;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted @color-4;
+
+        @media @max-767 {
+            margin-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    select {
+        margin-top: 10px;
+    }
+
+    .property-title {
+        font-weight: 600;
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

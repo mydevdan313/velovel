@@ -1,0 +1,51 @@
+/* .mg-admin-html .elfinder-button {
+    width: 25px !important;
+    height: 25px !important;
+}*/
+.mg-admin-html .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    -moz-border-radius-topright: 0  !important;
+     -webkit-border-top-right-radius: 0  !important; 
+    -khtml-border-top-right-radius: 0  !important;
+     border-top-right-radius: 0  !important; 
+}
+.mg-admin-html .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    -moz-border-radius-topleft: 0  !important;
+    -webkit-border-top-left-radius: 0  !important;
+    -khtml-border-top-left-radius: 0  !important;
+    border-top-left-radius: 0  !important;
+}
+.mg-admin-html .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    -moz-border-radius-bottomright: 0  !important;
+    -webkit-border-bottom-right-radius: 0  !important;
+    -khtml-border-bottom-right-radius: 0  !important;
+    border-bottom-right-radius: 0  !important;
+}
+.mg-admin-html .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    -moz-border-radius-bottomleft: 0  !important;
+    -webkit-border-bottom-left-radius: 0  !important;
+    -khtml-border-bottom-left-radius: 0  !important;
+    border-bottom-left-radius: 0  !important;
+}
+/*.mg-admin-html .elfinder-button-search {
+    width: 160px !important;
+}
+.mg-admin-html .elfinder-button-search input{
+    height: 25px !important;
+}
+.mg-admin-html #elfinder {
+    height: 390px !important;
+    font-size: 16px;
+}
+.mg-admin-html .elfinder-workzone {
+    height: 331px !important;
+} */
+
+.mg-admin-html #modal-elfinder{
+    height: 459px !important;
+}
+.mg-admin-html #modal-elfinder .elfinder-workzone>.ui-droppable{
+    z-index: 2 !important;
+}
+.mg-admin-html #modal-elfinder .elfinder-statusbar{
+    margin: 0 -1px !important;
+}

@@ -1,0 +1,141 @@
+/* c-order
+------------------------------------------------------------------- */
+.c-order {
+    .var () { @root: ~'.c-order'; }.var;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: calc(~ '100% - 20px');
+        padding: 0 20px;
+        font-weight: 600;
+        position: relative;
+        margin-bottom: 16px;
+        background: @color-12;
+
+        @media @max-767 {
+            height: 34px;
+        }
+
+        &:before {
+            top: 0;
+            width: 0;
+            height: 0;
+            content: '';
+            right: -20px;
+            position: absolute;
+            border-left: 20px solid @color-12;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+
+            @media @max-767 {
+                right: -17px;
+                border-left: 17px solid @color-12;
+                border-top: 17px solid transparent;
+                border-bottom: 17px solid transparent;
+            }
+        }
+
+        &--last {
+            width: 100%;
+            font-size: 18px;
+            justify-content: center;
+
+            @media @max-767 {
+                font-size: 15px;
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &--small {
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &--item {
+            width: 49%;
+            margin-bottom: 10px;
+
+            @media @max-767 {
+                width: 100%;
+            }
+        }
+
+        &--width {
+            width: 100%;
+        }
+    }
+
+    &__payment {
+
+        @media @max-767 {
+            margin-bottom: 10px;
+        }
+
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            [class*="icon-"] {
+                display: none;
+            }
+        }
+
+        label {
+            flex-grow: 0;
+            margin-bottom: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .rate-payment {
+            font-size: 12px;
+            padding-left: 6px;
+            text-transform: lowercase;
+        }
+    }
+
+    &__total {
+        text-align: center;
+
+        &--row {
+            margin-top: 16px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &--amount {
+            color: @color-7;
+            font-size: 24px;
+            font-weight: 600;
+
+            @media @max-767 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

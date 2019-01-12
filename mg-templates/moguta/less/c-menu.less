@@ -1,0 +1,122 @@
+/* c-menu
+------------------------------------------------------------------- */
+.c-menu {
+    .var () { @root: ~'.c-menu'; }.var;
+    display: flex;
+    align-items: center;
+
+    @media @min-1025 {
+        height: 100%;
+
+        &__dropdown {
+
+            &--1 {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+            &--2, &--3 {
+                z-index: 9;
+                width: 220px;
+                position: absolute;
+                background: @color-1;
+                box-shadow: inset 0 1px 0 1px @color-4, inset 0 1px 2px rgba(0, 0, 0, 0.16);
+            }
+
+            &--2 {
+                left: 0;
+                top: 100%;
+                .transform-top();
+            }
+
+            &--3 {
+                top: 0;
+                left: 100%;
+                margin-left: -1px;
+                .transform-left();
+            }
+        }
+
+        &__level {
+            height: 100%;
+            position: relative;
+
+            &--1:hover {
+
+                @{root}__link--1 {
+                    text-decoration: none;
+                    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.16);
+                }
+
+                @{root}__dropdown--2 {
+                    .transform-top--open();
+                }
+            }
+
+            &--2:hover {
+
+                @{root}__link--2 {
+                    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+
+                @{root}__dropdown--3 {
+                    .transform-left--open();
+                }
+            }
+
+            &--2, &--3 {
+                border-bottom: 1px solid @color-4;
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            font-size: 13px;
+            padding: 0 12px;
+            transition: box-shadow .3s;
+
+            &--1.active {
+                text-decoration: underline;
+                // box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.16);
+            }
+
+            &--2, &--3 {
+                display: flex;
+                align-items: center;
+                height: 36px;
+                padding: 0 12px;
+                position: relative;
+                transition: all .3s;
+
+                &.active {
+                    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            &--3:hover {
+                box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            &.active {
+                font-weight: 600;
+            }
+        }
+
+        &__icon {
+            display: flex;
+            align-items: center;
+
+            .icon {
+                font-size: 10px;
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------

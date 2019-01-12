@@ -1,0 +1,58 @@
+/* c-buy
+------------------------------------------------------------------- */
+.c-buy {
+    .var () { @root: ~'.c-buy'; }.var;
+    display: flex;
+
+    @media @max-767 {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    &__buttons {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        max-width: 460px;
+
+        > a {
+            padding: 0;
+            flex-grow: 1;
+            margin-bottom: 16px;
+            min-width: calc(~ '50% - 5px');
+
+            @media @max-767 {
+                min-width: 100%;
+                margin-bottom: 0;
+            }
+
+            + * {
+                margin-left: 10px;
+
+                @media @max-767 {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .product-info {
+            margin-left: 0;
+        }
+    }
+}
+
+// influence
+// -------------------------------------------------------------------
+.c-product .c-buy {
+    margin-top: 16px;
+}
+
+.c-goods--list .c-buy__buttons a {
+    margin-bottom: 0;
+}
+
+.l-body__index .c-buy__buttons {
+    align-items: flex-end;
+}
